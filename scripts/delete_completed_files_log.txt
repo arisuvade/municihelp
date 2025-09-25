@@ -1,0 +1,141 @@
+=== Completed Files Cleanup Started ===
+Date: 2025-08-27 13:19:04
+Root Directory: /home/aries/Code/municihelp
+
+Processing table: mswd_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: assistance_requests
+  Processing request ID: 4
+    ✗ Failed to delete files or clear references
+  Table summary: 1 requests processed, 0 files deleted, 1 errors
+
+Processing table: rabid_reports
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+=== Summary ===
+Total requests processed: 1
+Total files deleted: 0
+Total errors: 1
+Threshold date: 2025-08-20
+
+=== Completed Files Cleanup Started ===
+Date: 2025-08-27 13:21:18
+Root Directory: /home/aries/Code/municihelp
+
+Processing table: mswd_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: assistance_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: rabid_reports
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+=== Summary ===
+Total requests processed: 0
+Total files deleted: 0
+Total errors: 0
+Threshold date: 2025-08-20
+
+=== Completed Files Cleanup Started ===
+Date: 2025-08-27 13:21:42
+Root Directory: /home/aries/Code/municihelp
+
+Processing table: mswd_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: assistance_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: rabid_reports
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+=== Summary ===
+Total requests processed: 0
+Total files deleted: 0
+Total errors: 0
+Threshold date: 2025-08-20
+
+=== Completed Files Cleanup Started ===
+Date: 2025-08-27 13:21:43
+Root Directory: /home/aries/Code/municihelp
+
+Processing table: mswd_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: assistance_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: rabid_reports
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+=== Summary ===
+Total requests processed: 0
+Total files deleted: 0
+Total errors: 0
+Threshold date: 2025-08-20
+
+=== Completed Files Cleanup Started ===
+Date: 2025-08-27 13:22:44
+Root Directory: /home/aries/Code/municihelp
+
+Processing table: mswd_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: assistance_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: rabid_reports
+  Processing request ID: 9
+    ✗ Failed to delete files or clear references
+  Table summary: 1 requests processed, 0 files deleted, 1 errors
+
+=== Summary ===
+Total requests processed: 1
+Total files deleted: 0
+Total errors: 1
+Threshold date: 2025-08-20
+
+=== Completed Files Cleanup Started ===
+Date: 2025-08-27 13:25:07
+Root Directory: /home/aries/Code/municihelp
+
+Processing table: mswd_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: assistance_requests
+  Processing request ID: 8
+    ✓ Successfully deleted files and cleared references
+  Table summary: 1 requests processed, 1 files deleted, 0 errors
+
+Processing table: rabid_reports
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+=== Summary ===
+Total requests processed: 1
+Total files deleted: 1
+Total errors: 0
+Threshold date: 2025-08-20
+
+=== Completed Files Cleanup Started ===
+Date: 2025-08-27 13:44:10
+Root Directory: /home/aries/Code/municihelp
+
+Processing table: mswd_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: assistance_requests
+  Table summary: 0 requests processed, 0 files deleted, 0 errors
+
+Processing table: rabid_reports
+  Processing request ID: 11
+    ✓ Successfully deleted files and cleared references
+  Table summary: 1 requests processed, 1 files deleted, 0 errors
+
+=== Summary ===
+Total requests processed: 1
+Total files deleted: 1
+Total errors: 0
+Threshold date: 2025-08-20
+

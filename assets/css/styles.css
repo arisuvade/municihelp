@@ -1,6 +1,6 @@
 :root {
-    --munici-green: #4CAF50;
-    --munici-green-light: #E8F5E9;
+    --munici-green: #0E3B85;
+    --munici-green-light: #2C80C6;
 }
 
 .bg-munici-green {
@@ -18,8 +18,8 @@
 }
 
 .btn-munici-green:hover {
-    background-color: #3e8e41;
-    border-color: #3e8e41;
+    background-color: #0E3B85;
+    border-color: #0E3B85;
     color: white;
 }
 
@@ -100,3 +100,4 @@ footer {
     80% { opacity: 1; transform: translateY(0); }
     100% { opacity: 0; transform: translateY(-20px); }
 }
+

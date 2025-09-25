@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
             $otp = rand(100000, 999999);
             $otp_hash = password_hash($otp, PASSWORD_BCRYPT);
-            $otp_expiry = date('Y-m-d H:i:s', time() + 300);
+            $otp_expiry = date('Y-m-d H:i:s', time() + 300); // 5 minutes
 
             // check user
             $check = $conn->prepare("SELECT id FROM users WHERE phone = ?");
@@ -27,13 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit;
             }
 
-            // nsert new user
+            // insert new user
             $stmt = $conn->prepare("INSERT INTO users (phone, password_hash, otp_hash, otp_expiry) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("ssss", $phone, $password, $otp_hash, $otp_expiry);
 
             if ($stmt->execute()) {
                 // send otp via sms
-                $message = "Your MuniciHelp verification code is: $otp";
+                $message = "Your MuniciHelp verification code is: $otp. This code will expire in 5 minutes.";
                 $phone_numbers = [$phone];
                 
                 if (sendSMS($message, $phone_numbers) !== false) {
@@ -71,13 +71,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // generate login otp
                 $otp = rand(100000, 999999);
                 $otp_hash = password_hash($otp, PASSWORD_BCRYPT);
-                $otp_expiry = date('Y-m-d H:i:s', time() + 300);
+                $otp_expiry = date('Y-m-d H:i:s', time() + 300); // 5 minutes
 
                 $update = $conn->prepare("UPDATE users SET otp_hash = ?, otp_expiry = ? WHERE id = ?");
                 $update->bind_param("ssi", $otp_hash, $otp_expiry, $id);
 
                 // send otp via sms
-                $message = "Your MuniciHelp verification code is: $otp";
+                $message = "Your MuniciHelp login verification code is: $otp. This code will expire in 5 minutes.";
                 $phone_numbers = [$phone];
                 
                 if ($update->execute() && sendSMS($message, $phone_numbers) !== false) {
@@ -110,10 +110,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($type === 'registration') {
                 $stmt = $conn->prepare("SELECT id, otp_hash, otp_expiry FROM users WHERE phone = ? AND is_verified = 0");
                 $stmt->bind_param("s", $phone);
-            } else { // login
+            } else if ($type === 'login') {
                 $id = $verification['id'];
                 $stmt = $conn->prepare("SELECT otp_hash, otp_expiry FROM users WHERE id = ?");
                 $stmt->bind_param("i", $id);
+            } else { // password_reset
+                $stmt = $conn->prepare("SELECT id, otp_hash, otp_expiry FROM users WHERE phone = ?");
+                $stmt->bind_param("s", $phone);
             }
 
             $stmt->execute();
@@ -123,53 +126,62 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($user && password_verify($otp, $user['otp_hash']) && strtotime($user['otp_expiry']) > time()) {
                 if ($type === 'registration') {
-                    $update = $conn->prepare("UPDATE users SET is_verified = 1 WHERE id = ?");
+                    $update = $conn->prepare("UPDATE users SET is_verified = 1, otp_hash = NULL, otp_expiry = NULL WHERE id = ?");
                     $update->bind_param("i", $user['id']);
                     $update->execute();
                     $update->close();
                 }
 
-                $_SESSION['user_id'] = $type === 'registration' ? $user['id'] : $verification['id'];
+                if ($type === 'password_reset') {
+                    $_SESSION['password_reset_user'] = $user['id'];
+                    echo json_encode(['status' => 'success', 'redirect' => 'reset_password.php']);
+                } else {
+                    $_SESSION['user_id'] = $type === 'registration' ? $user['id'] : $verification['id'];
+                    echo json_encode(['status' => 'success', 'redirect' => '../index.php']);
+                }
+                
                 unset($_SESSION['otp_verification']);
-                echo json_encode(['status' => 'success', 'redirect' => '../index.php']);
             } else {
                 echo json_encode(['status' => 'error', 'message' => 'Invalid or expired OTP']);
             }
             break;
 
         case 'resend_otp':
-            if (!isset($_SESSION['otp_verification'])) {
-                echo json_encode(['status' => 'error', 'message' => 'Session expired']);
-                exit;
-            }
+    if (!isset($_SESSION['otp_verification'])) {
+        echo json_encode(['status' => 'error', 'message' => 'Session expired']);
+        exit;
+    }
 
-            $verification = $_SESSION['otp_verification'];
-            $phone = $verification['phone'];
-            $type = $verification['type'];
-            $otp = rand(100000, 999999);
-            $otp_hash = password_hash($otp, PASSWORD_BCRYPT);
-            $otp_expiry = date('Y-m-d H:i:s', time() + 300);
+    $verification = $_SESSION['otp_verification'];
+    $phone = $verification['phone'];
+    $type = $verification['type'];
+    $otp = rand(100000, 999999);
+    $otp_hash = password_hash($otp, PASSWORD_BCRYPT);
+    $otp_expiry = date('Y-m-d H:i:s', time() + 300); // 5 minutes
 
-            if ($type === 'registration') {
-                $stmt = $conn->prepare("UPDATE users SET otp_hash = ?, otp_expiry = ? WHERE phone = ? AND is_verified = 0");
-                $stmt->bind_param("sss", $otp_hash, $otp_expiry, $phone);
-            } else {
-                $id = $verification['id'];
-                $stmt = $conn->prepare("UPDATE users SET otp_hash = ?, otp_expiry = ? WHERE id = ?");
-                $stmt->bind_param("ssi", $otp_hash, $otp_expiry, $id);
-            }
+    if ($type === 'registration') {
+        $stmt = $conn->prepare("UPDATE users SET otp_hash = ?, otp_expiry = ? WHERE phone = ? AND is_verified = 0");
+        $stmt->bind_param("sss", $otp_hash, $otp_expiry, $phone);
+    } else if ($type === 'password_reset') {
+        $stmt = $conn->prepare("UPDATE users SET otp_hash = ?, otp_expiry = ? WHERE phone = ?");
+        $stmt->bind_param("sss", $otp_hash, $otp_expiry, $phone);
+    } else { // login
+        $id = $verification['id'];
+        $stmt = $conn->prepare("UPDATE users SET otp_hash = ?, otp_expiry = ? WHERE id = ?");
+        $stmt->bind_param("ssi", $otp_hash, $otp_expiry, $id);
+    }
 
-            // send otp via sms
-            $message = "Your MuniciHelp verification code is: $otp";
-            $phone_numbers = [$phone];
-            
-            if ($stmt->execute() && sendSMS($message, $phone_numbers) !== false) {
-                echo json_encode(['status' => 'success']);
-            } else {
-                echo json_encode(['status' => 'error', 'message' => 'Failed to resend OTP']);
-            }
-            $stmt->close();
-            break;
+    // send otp via sms
+    $message = "Your MuniciHelp verification code is: $otp. This code will expire in 5 minutes.";
+    $phone_numbers = [$phone];
+    
+    if ($stmt->execute() && sendSMS($message, $phone_numbers) !== false) {
+        echo json_encode(['status' => 'success']);
+    } else {
+        echo json_encode(['status' => 'error', 'message' => 'Failed to resend OTP']);
+    }
+    $stmt->close();
+    break;
 
         default:
             echo json_encode(['status' => 'error', 'message' => 'Invalid action']);

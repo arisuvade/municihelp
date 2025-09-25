@@ -1,0 +1,310 @@
+=== Report Generation Started ===
+Date: 2025-08-19 16:06:04
+Root Directory: /home/aries/Code/municihelp
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+Processing ambulance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_ambulance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/ambulance/scheduled/
+SUCCESS: ambulance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/ambulance/scheduled/ambulance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/ambulance/scheduled/ambulance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 3
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-21 21:18:12
+Root Directory: /home/aries/Code/municihelp
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 2
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-21 21:19:59
+Root Directory: /home/aries/Code/municihelp
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 2
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-21 21:22:31
+Root Directory: /home/aries/Code/municihelp
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 2
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-21 22:00:08
+Root Directory: /home/aries/Code/municihelp
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 2
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-21 22:06:03
+Root Directory: /home/aries/Code/municihelp
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 2
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-24 20:05:04
+Root Directory: /home/aries/Code/municihelp
+
+Processing mswd report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_mswd_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/mswd/scheduled/
+SUCCESS: mswd report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/scripts/reports/mswd/scheduled/mswd_report_2025-07.pdf
+Excel generated successfully: : /home/aries/Code/municihelp/scripts/reports/mswd/scheduled/mswd_report_2025-07.xlsx
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 3
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-24 20:05:49
+Root Directory: /home/aries/Code/municihelp
+
+Processing mswd report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_mswd_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/mswd/scheduled/
+SUCCESS: mswd report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/scripts/reports/mswd/scheduled/mswd_report_2025-07.pdf
+Excel generated successfully: : /home/aries/Code/municihelp/scripts/reports/mswd/scheduled/mswd_report_2025-07.xlsx
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 3
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-25 13:25:36
+Root Directory: /home/aries/Code/municihelp
+
+Processing mswd report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_mswd_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/mswd/scheduled/
+SUCCESS: mswd report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/scripts/reports/mswd/scheduled/mswd_report_2025-07.pdf
+Excel generated successfully: : /home/aries/Code/municihelp/scripts/reports/mswd/scheduled/mswd_report_2025-07.xlsx
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 3
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-25 13:26:18
+Root Directory: /home/aries/Code/municihelp
+
+Processing mswd report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_mswd_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/mswd/scheduled/
+ERROR: Failed to generate mswd report
+Exception: Script not found: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_mswd_report.php
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+ERROR: Failed to generate animal report
+Exception: Script not found: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+ERROR: Failed to generate assistance report
+Exception: Script not found: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+
+
+=== Summary ===
+Successful reports: 0
+Failed reports: 3
+=== Report Generation Started ===
+Date: 2025-08-25 13:29:12
+Root Directory: /home/aries/Code/municihelp
+
+Processing mswd report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_mswd_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/mswd/scheduled/
+SUCCESS: mswd report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/scripts/reports/mswd/scheduled/mswd_report_2025-07.pdf
+Excel generated successfully: : /home/aries/Code/municihelp/scripts/reports/mswd/scheduled/mswd_report_2025-07.xlsx
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 3
+Failed reports: 0
+=== Report Generation Started ===
+Date: 2025-08-25 13:30:09
+Root Directory: /home/aries/Code/municihelp
+
+Processing mswd report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_mswd_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/mswd/scheduled/
+SUCCESS: mswd report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/mswd/scheduled/mswd_report_2025-07.pdf
+Excel generated successfully: : /home/aries/Code/municihelp/reports/mayor/mswd/scheduled/mswd_report_2025-07.xlsx
+
+Processing animal report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/mayor/monthly_animal_report.php
+Output Dir: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/
+SUCCESS: animal report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/mayor/animal/scheduled/animal_report_2025-07.xlsx
+
+Processing assistance report...
+Script Path: /home/aries/Code/municihelp/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php
+Output Dir: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/
+SUCCESS: assistance report generated
+Output: PDF generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.pdf
+Excel generated successfully: /home/aries/Code/municihelp/reports/vice_mayor/assistance/scheduled/assistance_report_2025-07.xlsx
+
+
+=== Summary ===
+Successful reports: 3
+Failed reports: 0
