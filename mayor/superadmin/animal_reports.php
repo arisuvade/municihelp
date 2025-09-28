@@ -216,6 +216,13 @@ $scheduledReports = getScheduledReports('../../reports/mayor/animal/scheduled/')
             font-weight: bold;
         }
         
+        /* Disabled select styling */
+        select:disabled {
+            background-color: #e9ecef;
+            opacity: 1;
+            cursor: not-allowed;
+        }
+        
         /* Scheduled Reports Card Style */
         .scheduled-reports-container {
             max-height: 300px;
@@ -368,11 +375,10 @@ $scheduledReports = getScheduledReports('../../reports/mayor/animal/scheduled/')
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Request Type</label>
-                                <select class="form-control" name="request_type">
-                                    <option value="">All Requests</option>
-                                    <option value="online">Online Request</option>
-                                    <!-- <option value="walkin">Walk-in Request</option> -->
+                                <select class="form-control" name="request_type" disabled>
+                                    <option value="online" selected>Online Request</option>
                                 </select>
+                                <input type="hidden" name="request_type" value="online">
                             </div>
                         </div>
                         <div class="col-md-4">
