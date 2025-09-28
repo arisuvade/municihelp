@@ -220,6 +220,13 @@ include '../../../includes/header.php';
             justify-content: flex-end;
         }
     }
+
+    /* Disabled select styling */
+select:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+    cursor: not-allowed;
+}
     </style>
 </head>
 <body>
@@ -272,11 +279,10 @@ include '../../../includes/header.php';
     <div class="col-md-4">
         <div class="form-group">
             <label>Request Type</label>
-            <select class="form-control" name="request_type">
-                <option value="all">All Requests</option>
-                <option value="online">Online Request</option>
-                <!-- <option value="walkin">Walk-in Request</option> -->
-            </select>
+        <select class="form-control" name="request_type" disabled>
+            <option value="online" selected>Online Request</option>
+        </select>
+        <input type="hidden" name="request_type" value="online">
         </div>
     </div>
     <div class="col-md-4">
