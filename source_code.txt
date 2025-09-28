@@ -384,7 +384,6 @@ if (
     isset($_SESSION['pound_admin_id']) ||
     isset($_SESSION['vice_mayor_superadmin_id']) ||
     isset($_SESSION['assistance_admin_id']) ||
-    isset($_SESSION['ambulance_admin_id']) ||
     isset($_SESSION['barangay_admin_id'])  // Added barangay admin
 ) {
     if (isset($_SESSION['admin_department_path'])) {
@@ -458,9 +457,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         break;
                     case 8: // Assistance
                         $_SESSION['assistance_admin_id'] = $admin['id'];
-                        break;
-                    case 9: // Ambulance
-                        $_SESSION['ambulance_admin_id'] = $admin['id'];
                         break;
                     default: // Barangay Admins (IDs 17-35)
                         if ($admin['department_id'] >= 17 && $admin['department_id'] <= 35) {
@@ -6207,10 +6203,6 @@ $reports = [
         'script' => $root_dir . '/scripts/scheduled_reports/vice_mayor/monthly_assistance_report.php',
         'output_dir' => $root_dir . '/reports/vice_mayor/assistance/scheduled/'
     ],
-    // 'ambulance' => [
-    //     'script' => $root_dir . '/scripts/scheduled_reports/vice_mayor/monthly_ambulance_report.php',
-    //     'output_dir' => $root_dir . '/reports/vice_mayor/ambulance/scheduled/'
-    // ]
 ];
 
 // Initialize log
@@ -6298,18 +6290,6 @@ function deleteRequestFiles($tableName, $requestId, $conn) {
     
     try {
         switch ($tableName) {
-            case 'ambulance_requests':
-                $stmt = $conn->prepare("SELECT patient_id_path, requester_id_path FROM ambulance_requests WHERE id = ?");
-                $stmt->bind_param("i", $requestId);
-                $stmt->execute();
-                $result = $stmt->get_result();
-                $row = $result->fetch_assoc();
-                if ($row) {
-                    if (!empty($row['patient_id_path'])) $filePaths[] = $row['patient_id_path'];
-                    if (!empty($row['requester_id_path'])) $filePaths[] = $row['requester_id_path'];
-                }
-                break;
-                
             case 'assistance_requests':
                 $stmt = $conn->prepare("SELECT specific_request_path, indigency_cert_path, id_copy_path, id_copy_path_2, request_letter_path FROM assistance_requests WHERE id = ?");
                 $stmt->bind_param("i", $requestId);
@@ -6402,10 +6382,6 @@ function deleteRequestFiles($tableName, $requestId, $conn) {
 function clearFileReferences($tableName, $requestId, $conn) {
     try {
         switch ($tableName) {
-            case 'ambulance_requests':
-                $sql = "UPDATE ambulance_requests SET patient_id_path = NULL, requester_id_path = NULL WHERE id = ?";
-                break;
-                
             case 'assistance_requests':
                 $sql = "UPDATE assistance_requests SET specific_request_path = NULL, indigency_cert_path = NULL, id_copy_path = NULL, id_copy_path_2 = NULL, request_letter_path = NULL WHERE id = ?";
                 break;
