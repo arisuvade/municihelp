@@ -18,8 +18,8 @@ $superadmin_name = $superadmin_data['name'] ?? 'Superadmin';
 $pageTitle = 'MSWD Reports';
 include '../../includes/header.php';
 
-// Get all programs and barangays (no filtering)
-$programsQuery = "SELECT id, name, parent_id FROM mswd_types ORDER BY COALESCE(parent_id, id), parent_id IS NOT NULL, name";
+// Get only online programs (is_online=1)
+$programsQuery = "SELECT id, name, parent_id FROM mswd_types WHERE is_online = 1 ORDER BY COALESCE(parent_id, id), parent_id IS NOT NULL, name";
 $programsResult = $conn->query($programsQuery);
 $programsArray = [];
 while ($program = $programsResult->fetch_assoc()) {
@@ -221,6 +221,13 @@ $scheduledReports = getScheduledReports('../../reports/mayor/mswd/scheduled/');
             font-weight: bold;
         }
         
+        /* Disabled select styling */
+        select:disabled {
+            background-color: #e9ecef;
+            opacity: 1;
+            cursor: not-allowed;
+        }
+        
         /* Scheduled Reports Card Style - Matching walkin.php */
         .scheduled-reports-container {
             max-height: 300px;
@@ -373,11 +380,10 @@ $scheduledReports = getScheduledReports('../../reports/mayor/mswd/scheduled/');
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Request Type</label>
-                                <select class="form-control" name="request_type">
-                                    <option value="">All Requests</option>
-                                    <option value="online">Online Request</option>
-                                    <!-- <option value="walkin">Walk-in Request</option> -->
+                                <select class="form-control" name="request_type" disabled>
+                                    <option value="online" selected>Online Request</option>
                                 </select>
+                                <input type="hidden" name="request_type" value="online">
                             </div>
                         </div>
                         <div class="col-md-3">
