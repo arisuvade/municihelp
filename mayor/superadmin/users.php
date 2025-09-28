@@ -334,7 +334,7 @@ include '../../includes/header.php';
                     <div class="col-md-6">
                         <label class="form-label">Search</label>
                         <input type="text" class="form-control" id="searchFilter" 
-                            placeholder="Search by name, ID or phone" value="<?= htmlspecialchars($_GET['search'] ?? '') ?>">
+                            placeholder="Search by name or phone" value="<?= htmlspecialchars($_GET['search'] ?? '') ?>">
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Barangay</label>

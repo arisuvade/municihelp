@@ -420,7 +420,7 @@ $approved_claims = $conn->query("
                     <div class="filter-group">
                         <label class="form-label">Search</label>
                         <input type="text" class="form-control" id="searchFilter" 
-                            placeholder="Search by ID, name or contact">
+                            placeholder="Search by name or contact">
                     </div>
                     
                     <div class="filter-group">
