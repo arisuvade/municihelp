@@ -1,4 +1,4 @@
------------------------------------------------- REGISTER AND LOGIN
+REGISTER AND LOGIN
 
 /includes/db.php:
 
@@ -785,7 +785,7 @@ $maskedPhone = maskPhone($phone);
 ?>
 
 
------------------------------------------------- USER PANEL
+USER PANEL
 
 
 /mayor/mswd/index.php:
@@ -2548,7 +2548,7 @@ echo json_encode($response);
 ?>
 
 
------------------------------------------------- MAYOR'S OFFICE SUPERADMIN
+MAYOR'S OFFICE SUPERADMIN
 
 mayor/superadmin/management.php:
 
@@ -2725,7 +2725,7 @@ echo json_encode($response);
 ?>
 
 
------------------------------------------------- MSWD AND MAYOR'S OFFICE ADMIN PANEL
+MSWD AND MAYOR'S OFFICE ADMIN PANEL
 
 /mayor/mswd/mayor_admin/pending.php:
 
@@ -3592,7 +3592,7 @@ if ($is_sulong_dulong) {
 }
 
 
------------------------------------------------- PWD ADMIN PANEL
+PWD ADMIN PANEL
 
 /mayor/pwd/admin/members.php:
 
@@ -3934,7 +3934,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
------------------------------------------------- ANIMAL AND POUND ADMIN PANEL
+ANIMAL AND POUND ADMIN PANEL
 
 /mayor/animal/admin/pending.php:
 
@@ -4578,7 +4578,7 @@ switch ($action) {
 }
 
 
------------------------------------------------- VICE MAYOR'S OFFICE SUPERADMIN
+VICE MAYOR'S OFFICE SUPERADMIN
 
 /vice_mayor/superadmin/management.php:
 
@@ -4731,7 +4731,7 @@ echo json_encode($response);
 ?>
 
 
------------------------------------------------- ASSISTANCE ADMIN PANEL
+ASSISTANCE ADMIN PANEL
 
 /vice_mayor/assistance/admin/pending.php:
 
@@ -5071,7 +5071,7 @@ switch ($action) {
 }
 
 
------------------------------------------------- SCRIPTS
+SCRIPTS
 
 /scripts/run_monthly_reports.php:
 
