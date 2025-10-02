@@ -1,0 +1,20 @@
+<?php
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'municihelp';
+
+$conn = new mysqli($host, $username, $password, $database);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// ✅ Set MySQL timezone to Asia/Manila (UTC+8)
+$conn->query("SET time_zone = '+08:00'");
+
+// 💣 Now this will work with PH time
+$cleanup = $conn->prepare("DELETE FROM users WHERE is_verified = 0 AND created_at < DATE_SUB(NOW(), INTERVAL 5 MINUTE)");
+$cleanup->execute();
+$cleanup->close();
+?>

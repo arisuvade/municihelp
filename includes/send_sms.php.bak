@@ -1,0 +1,68 @@
+<?php
+function sendSMS($message, $phone_number) {
+    // API configuration
+    $api_url = "https://app.philsms.com/api/v3/sms/send";
+    $api_token = "2247|yZcPiU2uYQfWwavxVPG3xmPwlwUuv5Tq9dv1AhUr";
+    $sender_id = "PhilSMS";
+
+    // Handle array of phone numbers or single number
+    $numbers = is_array($phone_number) ? $phone_number : [$phone_number];
+    $formatted_numbers = [];
+    
+    foreach ($numbers as $number) {
+        $cleaned_number = preg_replace('/[^0-9]/', '', $number);
+        
+        if (substr($cleaned_number, 0, 2) === '63' && strlen($cleaned_number) === 12) {
+            $formatted_numbers[] = '+' . $cleaned_number;
+        } elseif (substr($cleaned_number, 0, 1) === '0' && strlen($cleaned_number) === 11) {
+            $formatted_numbers[] = '+63' . substr($cleaned_number, 1);
+        } elseif (substr($cleaned_number, 0, 1) === '9' && strlen($cleaned_number) === 10) {
+            $formatted_numbers[] = '+63' . $cleaned_number;
+        } elseif (substr($number, 0, 3) === '+63' && strlen($cleaned_number) === 12) {
+            $formatted_numbers[] = $number;
+        }
+    }
+
+    // Match the $send_data structure
+    $send_data = [
+        'sender_id' => $sender_id,
+        'recipient' => implode(',', $formatted_numbers),
+        'message'   => $message
+    ];
+    
+    $parameters = json_encode($send_data);
+
+    // Initialize cURL
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $api_url);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $parameters);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    // Set headers
+    $headers = [
+        "Content-Type: application/json",
+        "Authorization: Bearer $api_token"
+    ];
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+    // Execute the request
+    $get_sms_status = curl_exec($ch);
+
+    if (curl_errno($ch)) {
+        $error_msg = curl_error($ch);
+        curl_close($ch);
+        return [
+            'status' => 'error',
+            'message' => "cURL Error: $error_msg",
+            'formatted_numbers' => $formatted_numbers
+        ];
+    }
+
+    curl_close($ch);
+
+    $result = json_decode($get_sms_status, true);
+    $result['formatted_numbers'] = $formatted_numbers;
+    return $result;
+}
+?>
